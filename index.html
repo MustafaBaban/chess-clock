@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    button {
+      transition: all 0.1s;
+    }
+
+    button:active {
+      margin-top: 4px;
+    }
+
+    #app {
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      color: #2c3e50;
+      margin-top: 60px;
+    }
+
+    @keyframes pulse {
+      to {
+        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+      }
+    }
+  </style>
+  <title>Fischer Clock</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <select id="timeSelect" class=" my-4">
+      <option value="15">15 minutes</option>
+      <option value="10">10 minutes</option>
+      <option value="5">5 minutes</option>
+    </select>
+    <div class="flex place-content-center">
+      <div id="timer1" class="border-gray border-solid border-2 m-2">
+        <h1 class="text-8xl p-10">05:00</h1>
+      </div>
+      <div id="timer2" class="border-gray border-solid border-2 m-2">
+        <h1 class="text-8xl p-10">05:00</h1>
+      </div>
+    </div>
+    <button id="switchButton"
+      class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 my-4 rounded shadow" style="outline:none"
+      disabled>Switch</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
